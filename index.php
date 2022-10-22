@@ -11,7 +11,7 @@
     <header>
         <div class="header__container">
             <?php define("LOGO", "LOGO")?>
-            <h4>coś</h4>
+            <h4>Coś</h4>
             <hi><?php echo LOGO ?></h1>
             <nav>
                 <u1>
