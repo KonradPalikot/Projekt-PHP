@@ -1,0 +1,24 @@
+header {
+  border-bottom: 0.06rem solid black;
+}
+header .header__container {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header ul li {
+  margin-left: 1rem;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+header ul li:hover {
+  border-bottom: 0.06rem solid black;
+}/*# sourceMappingURL=main.css.map */

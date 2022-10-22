@@ -1,0 +1,15 @@
+@mixin button($bgcolor, $color) {
+    padding: 1rem 3rem;
+    background-color: $bgcolor;
+    border: 0.063rem solid $bgcolor;
+    transition: 0.5s;
+    cursor: pointer;
+    a {
+        color: $color;
+    }
+    &:hover {
+        background-color:  transparent;
+        color: $bgcolor;
+        border: 0.063rem solid $color;
+    }
+}

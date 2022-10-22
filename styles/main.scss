@@ -1,0 +1,150 @@
+@import "mixins";
+@import "variables";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $lato, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color: $white;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $darkGrey;
+}
+.inner--default {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: $darkGrey;
+    .header__container {
+        @extend .inner--default;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+            color: $pink;
+        }
+        ul {
+            display: flex;
+            li {
+                margin-left: 1rem;
+                border-bottom: 0.063rem solid transparent;
+                cursor: pointer;
+                &:hover {
+                    border-bottom: 0.063rem solid;
+                    border-image-source: linear-gradient(to right, $pink $blue);
+                    border-image-slice: 1;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-image: url(../assets/background-hero.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hero__container {
+        @extend .inner--default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 10rem;
+        border: 00.063rem solid $white;
+        h1{
+            color: $blue;
+            margin-bottom: 3rem;
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+        button {
+            @include button($blue $white)
+        }
+    }
+}
+
+.carts {
+    @extend .inner--default;
+    display: flex;
+    column-gap: 3rem;
+    justify-content: center;
+    .carts__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4rem 0;
+        flex-grow: 1;
+        padding: 2rem;
+        border: 0.063rem solid;
+        border-image-source: linear-gradient(to right, $pink, $blue);
+        border-image-slice: 1;
+        h3 {
+            margin-bottom: 2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.text-decoration {
+    background-image: url(..assets/background-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 10rem;
+    .text-decoration__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+footer {
+    align-content: center;
+    padding: 5rem 0;
+    .footer__container {
+        @extend .inner--default;
+        display: flex;
+        column-gap: 3rem;
+        .footer__container--column {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h4 {
+                margin-bottom: 1rem;
+                background: -webkit-repeating-linear-gradient(45deg, $pink, $blue);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+            li {
+                margin-bottom: 0.5rem;
+                cursor: pointer;
+
+            }
+        }
+    }
+
+}
