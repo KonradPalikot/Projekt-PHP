@@ -21,22 +21,28 @@
     session_start();
     require_once"config.php";
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
-    if($connection -> connect_erron == 0) {
-        $userEmail = $_POST["userEmail"];
-        $userPassword = $_POST['userPassword'];
 
-    $sql = "SELECT * FROM users WHERE email='userEmail' AND password='userPassword';"
+    if($connection -> connect_erron == 0) {
+        $userEmail = $_POST["email"];
+        $userPassword = $_POST['haslo'];
+
+    $sql = "SELECT * FROM php_projekt WHERE email='email' AND password='haslo';";
+
+
     if($result = $connection -> query($sql)) {
         if($result -> num_rows > 0) {
             $data = $result -> fetch_assoc();
-            $user = $data['user'];
+            $user = $data['name'];
             $email = $data['email'];
-            echo "użytkownik: $user, email: $email";
-            $result -> close{};
+            $_SESSION['signedIn'] = true;
+            unset($_SESSION['signInError']);
+            header('Location: index.php')
+
+            $result -> close();
         } else {
-            echo "Taki użytkownik nie istnieje";
+            header('Location: signInPage.php');
+            $_SESSION['signInError'] = true;
         }
-    }
 
     }
     if(isset($_GET['name'])) {
