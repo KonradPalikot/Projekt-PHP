@@ -1,0 +1,30 @@
+ <?php   
+    session_start();
+    require_once"config.php";
+    $connection = new mysqli($host, $db_user, $db_password, $db_name);
+
+    if($connection -> connect_errno == 0) {
+        $userEmail = $_POST["userEmail"];
+        $userPassword = $_POST['userPassword'];
+
+        $sql = "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';";
+
+
+        if($result = $connection -> query($sql)) {
+            if($result -> num_rows > 0) {
+                $data = $result -> fetch_assoc();
+                $user = $data['login'];
+                $email = $data['email'];
+                $_SESSION['signedIn'] = true;
+                unset($_SESSION['signInError']);
+                header('Location: index.php');
+                
+                $result -> close();
+            } else {
+                header('Location: signInPage.php');
+                $_SESSION['signInError'] = true;
+            }
+
+        }
+    }
+?>
