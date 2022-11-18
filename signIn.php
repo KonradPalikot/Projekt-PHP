@@ -6,9 +6,11 @@
     if($connection -> connect_errno == 0) {
         $userEmail = $_POST["userEmail"];
         $userPassword = $_POST['userPassword'];
-
-        $sql = "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';";
-
+        
+        $sql =sprintf(
+        "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';";
+        mysqli_real_escape_string($connection, $userEmail)
+        mysqli_real_escape_string($connection, $userPassword));
 
         if($result = $connection -> query($sql)) {
             if($result -> num_rows > 0) {
