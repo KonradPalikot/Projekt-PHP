@@ -22,7 +22,6 @@
             </nav>
         </div>
     </header>
-
     <section>
         <?php
         $title = "INDEX!"
