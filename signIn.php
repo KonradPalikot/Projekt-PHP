@@ -8,8 +8,8 @@
         $userPassword = htmlentities($_POST['userPassword'], ENT_QUOTES, "UTF-8");
 
         $sql =sprintf(
-        "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';";
-        mysqli_real_escape_string($connection, $userEmail)
+        "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword'",
+        mysqli_real_escape_string($connection, $userEmail),
         mysqli_real_escape_string($connection, $userPassword));
 
         if($result = $connection -> query($sql)) {
