@@ -3,10 +3,17 @@
     require_once"config.php";
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
 
+<<<<<<< HEAD
     if($connection -> connect_errno == 0) 
         $userEmail = $_POST["userEmail"];
         $userPassword = $_POST['userPassword'];
         
+=======
+    if($connection -> connect_errno == 0) {
+        $userEmail = htmlentities($_POST['userEmail'], ENT_QUOTES, "UTF-8");
+        $userPassword = htmlentities($_POST['userPassword'], ENT_QUOTES, "UTF-8");
+
+>>>>>>> 63df274f1f6db1c7657d0ccccdbe370bdfcdc510
         $sql =sprintf(
         "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';
         mysqli_real_escape_string($connection, $userEmail)
