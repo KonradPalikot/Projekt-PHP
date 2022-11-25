@@ -3,12 +3,12 @@
     require_once"config.php";
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
 
-    if($connection -> connect_errno == 0) {
+    if($connection -> connect_errno == 0) 
         $userEmail = $_POST["userEmail"];
         $userPassword = $_POST['userPassword'];
         
         $sql =sprintf(
-        "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';";
+        "SELECT * FROM php_projekt WHERE email='$userEmail' AND haslo='$userPassword';
         mysqli_real_escape_string($connection, $userEmail)
         mysqli_real_escape_string($connection, $userPassword));
 

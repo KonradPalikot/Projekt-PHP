@@ -27,9 +27,7 @@
         $title = "INDEX!"
         ?>
         <hi><?php echo "$title" ?></h1>
-        <p>Lorem Ipsum</p>
-        <p>Lorem Ipsum</p>
-        <p>Lorem Ipsum</p>
+        
     </section>
     <footer>
         <p>S.S_K.P_3aT</p>

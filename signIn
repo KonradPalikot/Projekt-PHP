@@ -7,7 +7,7 @@
         $userEmail = $_POST["email"];
         $userPassword = $_POST['haslo'];
 
-    $sql = "SELECT * FROM php_projekt WHERE email='email' AND password='haslo';";
+    $sql = "SELECT * FROM php_projekt WHERE email='email' AND password='haslo';";}
 
 
     if($result = $connection -> query($sql)) {
