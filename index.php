@@ -15,9 +15,9 @@
             <hi><?php echo LOGO ?></h1>
             <nav>
                 <u1>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
+                    <li><a href="http://localhost/Projekt%201/index.php">Home</a></li>
+                    <li><a href="http://localhost/Projekt%201/signUpPage.php">Rejestracja</a></li>
+                    <li><a href="http://localhost/Projekt%201/signInPage.php">Login</a></li>
                 </ul>
             </nav>
         </div>
