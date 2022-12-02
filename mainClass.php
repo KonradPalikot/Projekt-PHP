@@ -1,12 +1,14 @@
 <?php
 class MainClass {
     public function dbConnect() {
-
-        return new mysqli($host, $db_user, $db_password);
+        require_once"config.php";
+        return new mysqli($host, $db_user, $db_password, $db_name);
     }
 
-    public blockEntrace($move_to) {
-        if() {
+    public function blockEntrace($move_to) {
+        if(isset($_SESSION["signedIn"]))==False){
+            header("")
+        }
             header("Location:" $move_to)
         } 
     }
