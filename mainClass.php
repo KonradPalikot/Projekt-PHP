@@ -7,7 +7,7 @@ class MainClass {
 
     public function blockEntrace($move_to) {
         if(isset($_SESSION["signedIn"])==False){
-            header("Location:" $move_to)
+            header("Location: $move_to");
         } 
     }
 }
