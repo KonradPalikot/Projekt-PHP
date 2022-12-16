@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <style rel="stylesheet" href="main.scss"></style>
 <!DOCTYPE html>
 <html lang="pl">
@@ -7,38 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejestracja</title>
 </head>
-<body>
-<form method="POST" action="signUpPage.php">
-    <label>Nazwa użytkownika:</label>
-    <input type="text" name="name">
-    <label>Email:</label>
-    <input type="email" name="email">
-    <label>Hasło:</label>
-    <input type="text" name="haslo">
-    <input type="submit" value="Ok">
+<h1> Tutaj Możesz się zajrestrować</h1>
+<body> id="body"
+    <form method="POST" action="signUpPage.php">
+        <label>Nazwa użytkownika:</label>
+        <input type="text" name="name" >
+        <label>Email:</label>
+        <input type="email" name="email">
+        <label>Hasło:</label>
+        <input type="text" name="haslo">
+        <label>Hasło:</label>
+        <input type="text" name="hasloPowtorz">
+        <input type="submit" value="Ok">
+        <a href="index.php">Strona Główna</a
 </form>
-    <?php
-    if(isset($_GET['name'])) {
-        $name = $_GET['name'];
-        echo "<p>Nazwa użytkownika: $name</p>"; 
-    }
-    else {
-        echo "<p>Nie podano nazwy użytkownika</p>";
-    }
-    if(isset($_GET['email'])) {
-        $nazwa = $_GET['email'];
-        echo "<p>Nazwa użytkownika: $email</p>";
-    }
-    else {
-        echo "<p>Nie podano emaila</p>";
-    }
-    if(isset($_GET['haslo'])) {
-        echo "<p>Hasło: </p>";
-    }
-    else {
-        echo "<p>Nie podano hasła</p>";
-    }
-    
-    ?>
 </body>
 </html>
