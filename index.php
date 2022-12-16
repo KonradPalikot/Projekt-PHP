@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <style rel="stylesheet" href="style.scss"></style>    
+=======
+    <link rel="stylesheet" href="./styles/main.css">
+>>>>>>> efe7a08cb38bdf438b4e35e8554cc6de449749f2
     <title>Document</title>
 </head>
 <body>
