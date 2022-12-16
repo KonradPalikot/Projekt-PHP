@@ -1,4 +1,4 @@
- <?php   
+<?php   
     session_start();
     require_once"mainClass.php";
     // $connection = new mysqli($host, $db_user, $db_password, $db_name);
